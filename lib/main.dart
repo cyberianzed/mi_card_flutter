@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,34 +11,81 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lightBlue[600],
+        backgroundColor: Colors.teal[700],
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: <Widget>[
-              Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.yellow,
-                  child: Text('Container 1')),
-              SizedBox(
-                width: 50,
+              CircleAvatar(
+                  radius: 50.0,
+                  //backgroundColor: Colors.red,
+                  backgroundImage: AssetImage('images/jose.jpg')),
+              Text(
+                'Jose',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+              Text('FLUTTER DEVOLOPER',
+                  style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    letterSpacing: 2.5,
+                    color: Colors.teal[100],
+                    fontWeight: FontWeight.bold,
+                  )),
               Container(
-                width: 100.0,
-                height: 100.0,
+                padding: EdgeInsets.all(10.0),
                 color: Colors.white,
-                child: Text('Container 2'),
-              ),
-              SizedBox(
-                height: 50,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      size: 20.0,
+                      color: Colors.teal[700],
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '6282802991',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.green,
-                child: Text('Container 3'),
-              )
+                padding: EdgeInsets.all(10.0),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.mail_outlined,
+                      size: 20.0,
+                      color: Colors.teal[700],
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'josekjames5@gmail.com',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
